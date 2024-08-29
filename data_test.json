@@ -1,0 +1,33 @@
+{
+    "organizadores": [
+        {
+            "id": "3044510b-b317-4746-9675-3ea9d4195008",
+            "nome": "ONG Teste",
+            "email": "ong_teste@example.com",
+            "projetos": []
+        }
+    ],
+    "voluntarios": [
+        {
+            "id": "fc32ee24-3556-488e-9f5f-0edb75995625",
+            "nome_usuario": "Jo\u00e3o",
+            "email": "joao@example.com",
+            "palavras_chave": [
+                "educa\u00e7\u00e3o",
+                "meio ambiente"
+            ]
+        }
+    ],
+    "projetos": [
+        {
+            "id": "1208507e-4d32-4bf8-b5e9-91fb59170589",
+            "titulo": "Projeto Teste",
+            "descricao": "Este \u00e9 um projeto de teste.",
+            "id_organizador": "ID_DO_DIRETOR",
+            "palavras_chave": [
+                "teste",
+                "projeto"
+            ]
+        }
+    ]
+}
