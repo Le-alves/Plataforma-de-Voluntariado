@@ -29,12 +29,8 @@ def testar_funcionalidades_basicas():
     # 5. Verificar se o voluntário foi cadastrado corretamente
     print("Voluntário cadastrado:", novo_voluntario)
 
-    # 6. Buscar projetos com base nas palavras-chave do voluntário
-    projetos_encontrados = voluntario.buscar_projetos()
-    print("Projetos encontrados para o voluntário:", projetos_encontrados)
-
     # Limpar o arquivo de teste após o teste
-    os.remove(caminho_arquivo_teste)
+    #os.remove(caminho_arquivo_teste)
 
 if __name__ == "__main__":
     testar_funcionalidades_basicas()

@@ -2,7 +2,7 @@ class BuscadorDeProjetos:
 
     def __init__(self, manipulador_dados):
         self.manipulador_dados = manipulador_dados
-        self.dados = self.manipulador_dados.carregar_dados()
+        #self.dados = self.manipulador_dados.carregar_dados()
 
     def buscar_por_palavras_chaves(self, palavras_chave_voluntario):
         # Recuperar a lista de todos os projetos

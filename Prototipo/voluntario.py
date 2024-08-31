@@ -4,6 +4,7 @@ from buscadorDeProjetos import BuscadorDeProjetos
 class Voluntario: 
     def __init__(self, manipulador_dados):
         self.manipulador_dados = manipulador_dados
+        self.palavras_chave = None  # Inicializa o atributo palavras_chave
 
     def cadastrar(self, nome_usuario, email, palavras_chave):
         dados = self.manipulador_dados.carregar_dados()
@@ -20,4 +21,4 @@ class Voluntario:
     
     def buscar_projetos(self):
         buscador = BuscadorDeProjetos(self.manipulador_dados)
-        return buscador.buscar_por_palavras_chave(self.palavras_chave)
+        return buscador.buscar_por_palavras_chaves(self.palavras_chave)
