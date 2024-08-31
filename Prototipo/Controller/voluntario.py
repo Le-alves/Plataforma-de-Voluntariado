@@ -1,4 +1,6 @@
 import uuid
+from buscadorDeProjetos import BuscadorDeProjetos
+
 class Voluntario: 
     def __init__(self, manipulador_dados):
         self.manipulador_dados = manipulador_dados
@@ -15,3 +17,7 @@ class Voluntario:
         dados['voluntarios'].append(novo_voluntario)
         self.manipulador_dados.salvar_dados(dados)
         return novo_voluntario 
+    
+    def buscar_projetos(self):
+        buscador = BuscadorDeProjetos(self.manipulador_dados)
+        return buscador.buscar_por_palavras_chave(self.palavras_chave)
