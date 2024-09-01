@@ -17,19 +17,22 @@ class TelaCadastrarDiretor:
 
     def criar_widgets(self):
         self.main_frame = tk.Frame(self.root, padx=20, pady=20)
-        self.main_frame.pack(expand=True)
+        self.main_frame.pack(expand=False)
 
-        self.nome_label = tk.Label(self.main_frame, text="Nome:")
+         # Definindo a fonte padrão
+        font_padrao = ("Arial", 10)
+
+        self.nome_label = tk.Label(self.main_frame, text="Nome:", font=font_padrao)
         self.nome_label.pack(anchor='w')
         self.nome_entry = tk.Entry(self.main_frame)
         self.nome_entry.pack(fill=tk.X)
 
-        self.email_label = tk.Label(self.main_frame, text="Email:")
+        self.email_label = tk.Label(self.main_frame, text="Email:", font=font_padrao)
         self.email_label.pack(anchor='w')
         self.email_entry = tk.Entry(self.main_frame)
         self.email_entry.pack(fill=tk.X)
 
-        self.cadastrar_button = tk.Button(self.main_frame, text="Cadastrar", command=self.cadastrar)
+        self.cadastrar_button = tk.Button(self.main_frame, text="Cadastrar", command=self.cadastrar, font=font_padrao)
         self.cadastrar_button.pack(pady=10)
 
     def cadastrar(self):
