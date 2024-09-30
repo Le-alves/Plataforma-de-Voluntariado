@@ -1,0 +1,41 @@
+/*-----------------------------index.html---------------------------------*/
+.barra-doacoesFeitas {
+    margin-top: 50px; /* Adiciona 50px de espaço acima da barra */
+    margin-bottom: 20px; /* Espaço abaixo, se necessário */
+}
+
+
+/*-------------------------doacao.html------------------------------------
+/* Estilo personalizado para o formulário */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento entre as linhas do formulário */
+}
+
+.label-custom {
+    width: 150px; /* Largura fixa para o rótulo */
+    margin-right: 10px; /* Espaçamento entre o rótulo e o campo */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+.input-custom {
+    width: 300px; /* Largura do campo de entrada */
+}
+
+/* Estilo para as opções de radio buttons */
+.radio-options {
+    display: flex; /* Exibir as opções lado a lado */
+    align-items: center;
+}
+
+.radio-options .form-check {
+    margin-right: 15px; /* Espaçamento entre os botões */
+}
+
+/* Reduzir o tamanho do campo de seleção */
+.select-custom {
+    width: 200px; /* Ajusta a largura */
+    height: 30px; /* Ajusta a altura */
+    margin-left: 200px;
+}
