@@ -140,7 +140,7 @@ function registrar_usuario(numeroIdentificacao, tipoUsuario) {
 }
 
 // Função para registrar a doação no backend
-function registrar_doacao(numeroIdentificacao, categoria, item, quantidade = 1) {
+function registrar_doacao(numeroIdentificacao, categoria, item, quantidade) {
     const dadosDoacao = {
         numero_identificacao: numeroIdentificacao,
         categoria: categoria,
@@ -189,6 +189,9 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 item = categoria;  // Usar a própria categoria como item para alimentos ou categorias não especificadas
             }
+            const quantidadeTexto = document.getElementById('quantidade').value
+            const quantidade = parseInt(quantidadeTexto, 10); 
+
 
             // Converter o tipo de usuário de texto para número (1 para Estudante, 2 para Funcionário)
             let tipoUsuario;
@@ -210,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
             verificarUsuario(numeroIdentificacao).then(usuarioExiste => {
                 if (usuarioExiste) {
                     console.log("Usuário existente. Registrando a doação...");
-                    registrar_doacao(numeroIdentificacao, categoria, item, 1);  // Registrar doação com o usuário existente
+                    registrar_doacao(numeroIdentificacao, categoria, item, quantidade);  // Registrar doação com o usuário existente
                 } else {
                     console.log("Usuário não encontrado. Criando novo usuário...");
 
@@ -218,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     registrar_usuario(numeroIdentificacao, tipoUsuario).then(usuarioRegistrado => {
                         if (usuarioRegistrado) {
                             console.log("Usuário criado com sucesso. Registrando a doação...");
-                            registrar_doacao(numeroIdentificacao, categoria, item, 1);  // Registrar doação com o novo usuário
+                            registrar_doacao(numeroIdentificacao, categoria, item, quantidade);  // Registrar doação com o novo usuário
                         } else {
                             alert("Erro ao criar o usuário. Não foi possível registrar a doação.");
                         }
