@@ -1,8 +1,11 @@
 #Arquivo principal do Flask
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 import sqlite3
 
 app = Flask(__name__)
+
+CORS(app)  # Habilitar CORS para todo o aplicativo Flask
 
 # Função para conectar ao banco de dados
 def connect_db():
