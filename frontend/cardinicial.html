@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe - Iniciante</title>
+    <!-- Bootstrap CSS para Estilização -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo do Card */
+        .card-classe {
+            border: 2px solid #28A745;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 30px;
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            position: relative;
+        }
+
+        .card-classe:hover {
+            transform: scale(1.05); /* Aumentar ligeiramente no hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+        }
+
+        /* Ícone dentro do Card */
+        .classe-icone {
+            font-size: 60px;
+            color: #28A745; /* Verde para "Iniciante" */
+            margin-bottom: 20px;
+        }
+
+        /* Título do Card */
+        .classe-titulo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #155724; /* Verde escuro */
+            margin-top: 10px;
+        }
+
+        /* Descrição */
+        .classe-descricao {
+            font-size: 18px;
+            color: #7D7D7D;
+            margin-top: 15px;
+        }
+
+        /* Barra de Progresso */
+        .progress {
+            height: 20px;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .progress-bar {
+            background-color: #28A745; /* Verde para o progresso */
+            font-weight: bold;
+        }
+
+        /* Destaque do Selo */
+        .selo {
+            background-color: #28A745;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 18px;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="p-5">
+    <div class="container text-center">
+        <h1>Classe - Iniciante</h1>
+        <hr class="my-4">
+
+        <!-- Card de Classe Iniciante -->
+        <div class="card-classe">
+            <!-- Selo de Destaque -->
+            <div class="selo">Nível 1</div>
+            
+            <!-- Ícone do Card -->
+            <div class="classe-icone">🌱</div>
+            
+            <!-- Nome da Classe -->
+            <div class="classe-titulo">Iniciante</div>
+            
+            <!-- Descrição -->
+            <div class="classe-descricao">
+                <p>Você está começando sua jornada de doações!</p>
+                <p>Continue contribuindo para alcançar novas metas.</p>
+            </div>
+
+            <!-- Barra de Progresso -->
+            <div class="mt-4">
+                <h5>Progresso para a próxima classe:</h5>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                </div>
+                <p class="mt-3">Faltam 60 pontos para alcançar a próxima classe!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

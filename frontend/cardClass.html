@@ -1,0 +1,42 @@
+// Definir a classe para gerenciar todos os cards
+class CardClass {
+    // Construtor da classe (opcional)
+    constructor() {
+        // Inicialmente, podemos deixar vazio ou adicionar propriedades globais se necessário
+    }
+
+    // Método para exibir o card "Iniciante"
+    mostrarIniciante() {
+        return `
+            <div class="card-classe bg-light">
+                <div class="classe-icone">🌱</div>
+                <h2 class="text-primary">Iniciante</h2>
+                <p class="text-muted">Pontos acumulados: <strong>20</strong></p>
+                <p>Você está começando a sua jornada de doações! Continue contribuindo para alcançar novas metas.</p>
+            </div>
+        `;
+    }
+
+    // Futuramente, métodos para outros níveis de cards
+    mostrarContribuidor() {
+        return `
+            <div class="card-classe bg-light">
+                <div class="classe-icone">⭐</div>
+                <h2 class="text-primary">Contribuidor</h2>
+                <p class="text-muted">Pontos acumulados: <strong>100</strong></p>
+                <p>Você é um doador regular! Continue assim para se tornar um Colaborador!</p>
+            </div>
+        `;
+    }
+
+    mostrarColaborador() {
+        return `
+            <div class="card-classe bg-light">
+                <div class="classe-icone">💪</div>
+                <h2 class="text-primary">Colaborador</h2>
+                <p class="text-muted">Pontos acumulados: <strong>300</strong></p>
+                <p>Seu impacto é notável! Continue ajudando a comunidade e logo será um Herói Solidário!</p>
+            </div>
+        `;
+    }
+}

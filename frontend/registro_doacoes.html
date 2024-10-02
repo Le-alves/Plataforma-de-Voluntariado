@@ -47,9 +47,34 @@
 
             <!-- Botão de Enviar -->
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success">Pesquisar</button>
+                <!-- Altere o `type` para `button` para evitar o comportamento padrão de envio -->
+                <button type="button" class="btn btn-success" id="pesquisar-btn">Pesquisar</button>
             </div>
         </form>
+
+        <!-- Contêiner para o Card -->
+        <div id="card-classe" class="d-none mt-4">
+            <!-- O conteúdo do card será gerado dinamicamente -->
+        </div>
+
+
+        <!-- Tabela de Doações (inicialmente oculta) -->
+        <div id="tabela-doacoes" class="mt-5 d-none">
+            <h3 class="text-center">Histórico de Doações</h3>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Tipo de Doação</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Pontos</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo">
+                    <!-- Linhas da tabela serão preenchidas pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
 
         
     </main>
@@ -58,6 +83,9 @@
     <footer class="bg-light text-center text-dark p-3 mt-5">
         <p>&copy; 2024 Doa ICEA - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Link para o JavaScript da classe de cards -->
+    <script src="js/cards.js"></script> 
 
     <!-- Link para o JavaScript na pasta "js" -->
     <script src="js/script.js"></script>
