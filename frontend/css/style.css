@@ -1,11 +1,69 @@
 /*-----------------------------index.html---------------------------------*/
-.barra-doacoesFeitas {
-    margin-top: 50px; /* Adiciona 50px de espaço acima da barra */
-    margin-bottom: 20px; /* Espaço abaixo, se necessário */
+
+body {
+    background-color: #d4d3cb !important; /* Mude o código hexadecimal para a cor desejada */
+}
+
+.botoes-menu {
+    padding: 7px 15px !important;   /* Ajusta o espaçamento interno (altura e largura) */
+    font-size: 20px !important;      /* Aumenta o tamanho do texto */
+    border-radius: 8px !important;   /* Bordas mais arredondadas */
+    background-color: rgba(36, 106, 64, 0.793) !important;
 }
 
 
-/*-------------------------doacao.html------------------------------------
+.barra-doacoesFeitas {
+    margin-top: 50px; /* Adiciona 50px de espaço acima da barra */
+    margin-bottom: 20px; /* Espaço abaixo, se necessário */
+    background-color: #28070e28 !important;
+    
+}
+
+.barra-doacoesFeitas .progress-bar {
+    background-color: #22a11c; /* Defina a cor desejada (por exemplo, laranja) */
+}
+
+.card {
+    background-color: rgba(155, 182, 182, 0.12) !important;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-title {
+    font-weight: 700;
+    color: rgb(1, 99, 98) !important;
+}
+
+.container {
+    margin-top: 50px;  /* Ajustar o espaçamento geral */
+}
+
+.rodape{
+
+    background: #0b240921;
+
+}
+
+
+
+/*-------------------------doacao.html------------------------------------*/
+/*
+.barra_superior {
+    background-color: #a4cfa68a !important; /*/
+
+.logo-image {
+        width: 200px !important; /* Defina um tamanho específico */
+        height: auto !important ; /* Mantém a proporção da altura */
+        max-width: 300px !important ; /* Limita o aumento da largura */
+        object-fit: contain !important; /* Mantém o conteúdo dentro da área da imagem */
+    }
+    
+
 /* Estilo personalizado para o formulário */
 .input-group {
     display: flex;

@@ -11,17 +11,17 @@
 
      <!-- Cabeçalho  -->
      <div class="container d-flex align-items-center justify-content-center mt-5">
-        <img src="/frontend/img/doa_icea.png" alt="Doa ICEA" width="100" height="100" class="me-5">
+        <img src="img/doa_icea.png" alt="Doa ICEA" width="200" height="200" class="me-5">
         <h1>Bem-vindo ao Doa ICEA</h1>
     </div>
 </head>
 <body>
    <!-- Conteúdo Principal -->
-    <main class="container text-center mt-4">
-        <p>Aqui você pode encontrar informações sobre como doar e contribuir com a comunidade do ICEA!</p>
-        <!-- Botão Doar -->
-        <button type="button" class="btn btn-primary"onclick="window.location.href='doacao.html'">Doar</button>
-        <button type="button" class="btn btn-primary"onclick="window.location.href='registro_doacoes.html'">Suas contribuições</button>
+    <main class="container text-center mt-2">
+        <p style="font-size: 20px;">Aqui você pode encontrar informações sobre como doar e contribuir com a comunidade do ICEA!</p>
+        <!-- Botões com espaçamento usando classes do Bootstrap -->
+        <button type="button" class="btn btn-primary mt-1 me-2 botoes-menu" onclick="window.location.href='doacao.html'">Doar</button>
+        <button type="button" class="btn btn-primary mt-1 botoes-menu" onclick="window.location.href='registro_doacoes.html'">Suas contribuições</button>
 
 
         <!--barra de Progresso -->
@@ -30,29 +30,67 @@
         </div>
 
         <!-- Nova Seção de Informações -->
-        <section class="mt-5">
-            <h2>Sobre o Projeto</h2>
-            <p class="mt-3">
-                O projeto <strong>Doa ICEA</strong> foi criado com o objetivo de incentivar a solidariedade dentro do campus do ICEA. 
-                Ele permite que estudantes e funcionários contribuam com doações de alimentos, roupas e outros itens essenciais para 
-                ajudar comunidades carentes e membros vulneráveis da comunidade acadêmica.
-            </p>
-            <p>
-                <h3>Como Funciona? </h3> 
-                Escolha o que deseja doar — roupas, alimentos ou itens essenciais que possam ajudar alguém.
-                Leve até o nosso de coleta localizado no campus ICEA.
-            </p>
-            <p>
-                <h3>Por Que Doar?</h3>
-                Este projeto não só atende a necessidades básicas de quem recebe as doações, mas também promove valores de empatia, 
-                responsabilidade social e engajamento comunitário entre os doadores.
-            </p>
-            <p></p>
-                <h3>Vamos Começar?</h3>
-                Clique no botão “Doação” acima e veja como você pode contribuir hoje. Seja parte dessa corrente do bem e 
-                ajude a fazer do ICEA um lugar ainda mais solidário!
-            </p>
+        <!-- Seção de Cards -->
+        <section class="container mt-5">
+            <div class="row">
+                <!-- Card: Vamos Começar? (Primeira Linha - 100% de Largura) -->
+                <div class="col-md-12">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vamos Começar?</h5>
+                            <p class="card-text">
+                                Clique no botão “Doação” acima e veja como você pode contribuir hoje. Seja parte dessa corrente do bem e
+                                ajude a fazer do ICEA um lugar ainda mais solidário!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda Linha de Cards -->
+            <div class="row">
+                <!-- Card: Sobre o Projeto -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Sobre o Projeto</h5>
+                            <p class="card-text">
+                                O projeto <strong>Doa ICEA</strong> foi criado com o objetivo de incentivar a solidariedade dentro do campus do ICEA.
+                                Ele permite que estudantes e funcionários contribuam com doações de alimentos, roupas e outros itens essenciais para
+                                ajudar comunidades carentes e membros vulneráveis da comunidade acadêmica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Como Funciona? -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Como Funciona?</h5>
+                            <p class="card-text">
+                                Escolha o que deseja doar — roupas, alimentos ou itens essenciais que possam ajudar alguém.
+                                Leve até o nosso ponto de coleta localizado no campus ICEA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Por Que Doar? -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Por Que Doar?</h5>
+                            <p class="card-text">
+                                Este projeto não só atende a necessidades básicas de quem recebe as doações, mas também promove valores de empatia,
+                                responsabilidade social e engajamento comunitário entre os doadores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
     </main>
 
