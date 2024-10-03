@@ -1,7 +1,7 @@
 /*-----------------------------index.html---------------------------------*/
 
 body {
-    background-color: #d4d3cb !important; /* Mude o código hexadecimal para a cor desejada */
+    background-color: #d4d3cb ; /* Mude o código hexadecimal para a cor desejada */
 }
 
 .botoes-menu {
@@ -45,55 +45,128 @@ body {
 
 .rodape{
 
-    background: #0b240921;
+    background: rgba(11, 36, 9, 0.129);
 
 }
-
-
 
 /*-------------------------doacao.html------------------------------------*/
-/*
-.barra_superior {
-    background-color: #a4cfa68a !important; /*/
 
+header {
+    background-color: #d4d3cb  /* Mantém a cor existente */
+}
+
+/* Define o fundo branco para o restante da página */
+body {
+    background-color: #ffffff !important; /* Fundo branco */
+}
+
+/* Container Principal */
+.container {
+    max-width: 800px; /* Definir um tamanho fixo */
+    margin: 0 auto; /* Centraliza todo o conteúdo */
+}
+
+/* ---------- Logo ---------- */
 .logo-image {
-        width: 200px !important; /* Defina um tamanho específico */
-        height: auto !important ; /* Mantém a proporção da altura */
-        max-width: 300px !important ; /* Limita o aumento da largura */
-        object-fit: contain !important; /* Mantém o conteúdo dentro da área da imagem */
-    }
-    
-
-/* Estilo personalizado para o formulário */
-.input-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Espaçamento entre as linhas do formulário */
+    width: 200px; /* Defina um tamanho específico */
+    height: auto; /* Mantém a proporção da altura */
+    max-width: 250px; /* Limita o aumento da largura */
+    object-fit: contain; /* Mantém o conteúdo dentro da área da imagem */
 }
 
-.label-custom {
-    width: 150px; /* Largura fixa para o rótulo */
-    margin-right: 10px; /* Espaçamento entre o rótulo e o campo */
-    text-align: right; /* Alinha o texto à direita */
+/* ---------- Cabeçalho ---------- */
+header h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.input-custom {
-    width: 300px; /* Largura do campo de entrada */
+/* ---------- Formulário de Doação ---------- */
+form {
+    background-color: rgba(11, 36, 9, 0.129); /* Fundo leve */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-bottom: 30px; /* Espaço abaixo do formulário */
 }
 
-/* Estilo para as opções de radio buttons */
+/* ---------- Inputs e Selects ---------- */
+
+input[type="radio"] {
+    -webkit-appearance: none; /* Remove o estilo padrão no Chrome e Safari */
+    -moz-appearance: none; /* Remove o estilo padrão no Firefox */
+    appearance: none; /* Remove o estilo padrão */
+    width: 16px; /* Largura do botão */
+    height: 16px; /* Altura do botão */
+    border: 2px solid #28a745; /* Borda verde */
+    border-radius: 50%; /* Deixa as bordas arredondadas */
+    outline: none; /* Remove a borda de foco padrão */
+    cursor: pointer; /* Mostra o cursor pointer */
+}
+
+/* Cor de fundo quando selecionado */
+input[type="radio"]:checked {
+    background-color: #28a745; /* Cor verde no interior */
+    border: 2px solid #28a745; /* Borda verde */
+}
+
+input[type="text"], input[type="number"], select {
+    width: 25%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease; /* Efeito suave */
+    color: #333; /* Cor do texto */
+}
+
+input[type="text"]:focus, select:focus, input[type="number"]:focus {
+    border-color: #000000; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Efeito de foco */
+}
+
+
+/* ---------- Botões ---------- */
+button[type="submit"] {
+    background-color: #28a745; /* Verde Bootstrap */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px; /* Botão arredondado */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Botão Voltar para a Página Inicial */
+.btn-light {
+    background-color: #e2e6ea; /* Cor mais suave */
+    color: #343a40;
+}
+
+/* ---------- Radio Buttons ---------- */
 .radio-options {
     display: flex; /* Exibir as opções lado a lado */
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .radio-options .form-check {
     margin-right: 15px; /* Espaçamento entre os botões */
 }
 
-/* Reduzir o tamanho do campo de seleção */
+/* ---------- Rótulos Personalizados ---------- */
+.label-custom {
+    width: 150px; /* Largura fixa para o rótulo */
+    margin-right: 10px; /* Espaçamento entre o rótulo e o campo */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+/* ---------- Seletores Personalizados ---------- */
 .select-custom {
     width: 200px; /* Ajusta a largura */
     height: 30px; /* Ajusta a altura */
-    margin-left: 200px;
+    margin-left: 200px; /* Margem para ajustar o alinhamento */
 }
+
