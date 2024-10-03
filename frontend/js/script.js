@@ -251,24 +251,20 @@ function mostrarTabelaDoacoes(numeroIdentificacao) {
         alert("Ocorreu um erro ao buscar as doações. Verifique o console.");
     });
 }
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Função para atualizar a barra de progresso com o valor total de doações
     function atualizarProgresso() {
-        // Faz uma requisição para o endpoint que retorna o total de doações no backend Flask
         fetch('http://127.0.0.1:5000/total_doacoes')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro na requisição: ' + response.status);
                 }
                 return response.json();
-            }) // Converte a resposta para JSON
+            })
             .then(data => {
-                // Pega o valor total de doações retornado pela API
                 let totalDoacoes = data.total_doacoes;
 
-                // Defina uma meta de doações (por exemplo, 100 itens doados)
-                let metaDoacoes = 25; // Ajuste a meta conforme necessário
+                // Defina a meta de doações conforme necessário
+                let metaDoacoes = 40; 
 
                 // Calcula a porcentagem com base na meta
                 let progresso = (totalDoacoes / metaDoacoes) * 100;
@@ -277,6 +273,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 let progressBar = document.querySelector('.progress-bar');
                 progressBar.setAttribute('aria-valuenow', progresso);
                 progressBar.style.width = `${progresso}%`;
+
+                // Limpa qualquer mensagem anterior
+                progressBar.textContent = "";
+
+                // Definir avisos específicos
+                if (progresso >= 50 && progresso < 100) {
+                    progressBar.textContent = "Meta a Meio Caminho!";
+                } else if (progresso >= 100) {
+                    progressBar.textContent = "Meta Alcançada! Obrigado!";
+                }
             })
             .catch(error => {
                 console.error('Erro ao buscar o total de doações:', error);
